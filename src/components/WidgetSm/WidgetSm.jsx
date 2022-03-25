@@ -86,25 +86,9 @@ export default function WidgetSm() {
             Display
           </button>
         </li>
+        
       </ul>
     </div>
   );
 }
 
-// import React from 'react'
-
-// export default function WidgetSm() {
-//   return (
-//     <div>WidgetSm</div>
-//   )
-// }
-
-// import React from 'react'
-
-// const WidgetSm = () => {
-//   return (
-//     <div>WidgetSm</div>
-//   )
-// }
-
-// export default WidgetSm
