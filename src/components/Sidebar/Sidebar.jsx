@@ -1,4 +1,4 @@
-import React from "react";
+import "./Sidebar.css";
 import {
   LineStyle,
   Timeline,
@@ -13,20 +13,21 @@ import {
   WorkOutline,
   Report,
 } from "@material-ui/icons";
-import "./Sidebar.css";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
-        {/* Dahboard */}
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem active">
-              <LineStyle className="sidebarIcon" />
-              Home
-            </li>
+            <Link to="/" className="link">
+              <li className="sidebarListItem active">
+                <LineStyle className="sidebarIcon" />
+                Home
+              </li>
+            </Link>
             <li className="sidebarListItem">
               <Timeline className="sidebarIcon" />
               Analytics
@@ -37,19 +38,21 @@ export default function Sidebar() {
             </li>
           </ul>
         </div>
-
-        {/* Quick Menu */}
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Quick Menu</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem ">
-              <PermIdentity className="sidebarIcon" />
-              Users
-            </li>
-            <li className="sidebarListItem">
-              <Storefront className="sidebarIcon" />
-              Products
-            </li>
+            <Link to="/users" className="link">
+              <li className="sidebarListItem">
+                <PermIdentity className="sidebarIcon" />
+                Users
+              </li>
+            </Link>
+            <Link to="/products" className="link">
+              <li className="sidebarListItem">
+                <Storefront className="sidebarIcon" />
+                Products
+              </li>
+            </Link>
             <li className="sidebarListItem">
               <AttachMoney className="sidebarIcon" />
               Transactions
@@ -60,12 +63,10 @@ export default function Sidebar() {
             </li>
           </ul>
         </div>
-
-        {/* Notifications */}
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Notifications</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem ">
+            <li className="sidebarListItem">
               <MailOutline className="sidebarIcon" />
               Mail
             </li>
@@ -79,12 +80,10 @@ export default function Sidebar() {
             </li>
           </ul>
         </div>
-
-        {/* Stafff */}
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle"> Stafff</h3>
+          <h3 className="sidebarTitle">Staff</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem ">
+            <li className="sidebarListItem">
               <WorkOutline className="sidebarIcon" />
               Manage
             </li>
@@ -94,7 +93,7 @@ export default function Sidebar() {
             </li>
             <li className="sidebarListItem">
               <Report className="sidebarIcon" />
-              Report
+              Reports
             </li>
           </ul>
         </div>
